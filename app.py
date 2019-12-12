@@ -10,5 +10,9 @@ app = Flask(__name__)
 def hello():
     return app.send_static_file("index.html")
 
+@app.route("/test")
+def test():
+    return "testing 123"
+
 if __name__ == "__main__":        # on running python app.py
     app.run()                     # run the flask app
